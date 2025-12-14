@@ -4,3 +4,4 @@ This web application is a risk refinement assistant. It will take the condition(
 ## Sources
 ### Code Help
 - Reusing HTML header and footer with JavaScript: https://www.w3tutorials.net/blog/make-header-and-footer-files-to-be-included-in-multiple-html-pages/
+- HTML input types: https://www.w3schools.com/html/html_form_input_types.asp
