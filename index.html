@@ -10,32 +10,50 @@
     <div id="header"></div> <!-- header placeholder -->
     <section class="content-section container">
         <h2 class="section-header">Refine Your Risk</h2>
-        <div class="ctc-input">
-            <span class="start">Given that</span>
-            <div class="condition">
-                <span class="condition-label">Condition: </span>
-                <input class="condition-input" type="text">
+        <form class="input-form">
+            <span class="static-text start">Given that</span>
+            <div class="input-box condition">
+                <label class="label condition-label" for="condition">Condition: </label>
+                <input class="input condition-input" type="text" name="condition">
             </div>
             <div class="subconditions">
-                <span class="subcondition-number-label">Number of subconditions: </span>
-                <select class="drop-btn">
+                <label class="subcondition-number-label" for="subcondition-dropdown">Number of subconditions: </label>
+                <select id="select" class="drop-btn" onchange="toggleDiv()">
                     <option class="drop-option" value="0">None</option>
                     <option class="drop-option" value="2">2</option>
                     <option class="drop-option" value="3">3</option>
                     <option class="drop-option" value="4">4</option>
-                    <option class="drop-option" value="5">5</option>
+                    <option class="drop-option" value="5" selected>5</option>
                 </select>
-                <!-- number dropdown with None, 2, 3, 4, 5 -->
-                <!-- subcondition inputs -->
+                <div id="one" class="input-box subcondition1">
+                    <label class="label subcondition1-label" for="subcondition1">Subcondition 1: </label>
+                    <input class="input subcondition1-input" type="text" name="subcondition1">
+                </div>
+                <div id="two" class="input-box subcondition2">
+                    <label class="label subcondition2-label" for="subcondition2">Subcondition 2: </label>
+                    <input class="input subcondition2-input" type="text" name="subcondition2">
+                </div>
+                <div id="three" class="input-box subcondition3">
+                    <label class="label subcondition3-label" for="subcondition3">Subcondition 3: </label>
+                    <input class="input subcondition3-input" type="text" name="subcondition3">
+                </div>
+                <div id="four" class="input-box subcondition4">
+                    <label class="label subcondition4-label" for="subcondition4">Subcondition 4: </label>
+                    <input class="input subcondition4-input" type="text" name="subcondition4">
+                </div>
+                <div id="five" class="input-box subcondition5">
+                    <label class="label subcondition5-label" for="subcondition5">Subcondition 5: </label>
+                    <input class="input subcondition5-input" type="text" name="subcondition5">
+                </div>
             </div>
-            <span class="transition">then there is concern that (possibly)</span>
-            <div class="consequence">
-                <span class="consequence-label">Consequence: </span>
-                <input class="consequence-input" type="text">
+            <span class="static-text transition">then there is concern that (possibly)</span>
+            <div class="input-box consequence">
+                <label class="label consequence-label" for="consequence">Consequence: </label>
+                <input class="input consequence-input" type="text" name="consequence">
             </div>
-            <button class="btn submit-btn">Submit</button>
+            <input type="submit" value="Submit">
             <span><a href="output.html">temporary output page link</a></span>
-        </div>
+        </form>
     </section>
     <div id="footer"></div> <!-- footer placeholder -->
 </body>
