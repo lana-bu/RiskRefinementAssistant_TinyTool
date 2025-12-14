@@ -69,11 +69,18 @@ body {
     text-decoration: underline;
 }
 
-/*section headers*/
+/*section headers & text*/
 .section-header {
     text-align: center;
     font-size: 26px;
-    margin-bottom: 30x;
+    margin-bottom: 30px;
+}
+
+.section-text {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    text-align: left;
 }
 
 .help-topic-header {
