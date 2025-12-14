@@ -9,4 +9,5 @@ This web application is a risk refinement assistant. It will take the condition(
 - HTML form info: https://www.w3schools.com/html/html_forms.asp
 - Setting default value of HTML dropdown: https://www.geeksforgeeks.org/html/how-to-set-the-default-value-for-an-html-select-element/
 - Show/hide element based on dropdown selection: https://www.geeksforgeeks.org/javascript/how-to-show-hide-a-div-based-on-selected-option-value-of-a-select-using-javascript/
+- Remove last child element: https://javascriptguide.com/node-removechild/
 - Passing an array to a JavaScript class constructor: https://stackoverflow.com/questions/50032748/using-an-array-inside-a-constructor-using-javascript
