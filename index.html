@@ -18,33 +18,13 @@
             </div>
             <div class="subconditions">
                 <label class="subcondition-number-label" for="subcondition-dropdown">Number of subconditions: </label>
-                <select id="select" class="drop-btn" onchange="toggleDiv()">
-                    <option class="drop-option" value="0">None</option>
+                <select id="selectNumber" class="drop-btn" onchange="toggleSubconditions()">
+                    <option class="drop-option" value="0" selected>None</option>
                     <option class="drop-option" value="2">2</option>
                     <option class="drop-option" value="3">3</option>
                     <option class="drop-option" value="4">4</option>
-                    <option class="drop-option" value="5" selected>5</option>
+                    <option class="drop-option" value="5">5</option>
                 </select>
-                <div id="one" class="input-box subcondition1">
-                    <label class="label subcondition1-label" for="subcondition1">Subcondition 1: </label>
-                    <input class="input subcondition1-input" type="text" name="subcondition1">
-                </div>
-                <div id="two" class="input-box subcondition2">
-                    <label class="label subcondition2-label" for="subcondition2">Subcondition 2: </label>
-                    <input class="input subcondition2-input" type="text" name="subcondition2">
-                </div>
-                <div id="three" class="input-box subcondition3">
-                    <label class="label subcondition3-label" for="subcondition3">Subcondition 3: </label>
-                    <input class="input subcondition3-input" type="text" name="subcondition3">
-                </div>
-                <div id="four" class="input-box subcondition4">
-                    <label class="label subcondition4-label" for="subcondition4">Subcondition 4: </label>
-                    <input class="input subcondition4-input" type="text" name="subcondition4">
-                </div>
-                <div id="five" class="input-box subcondition5">
-                    <label class="label subcondition5-label" for="subcondition5">Subcondition 5: </label>
-                    <input class="input subcondition5-input" type="text" name="subcondition5">
-                </div>
             </div>
             <span class="static-text transition">then there is concern that (possibly)</span>
             <div class="input-box consequence">

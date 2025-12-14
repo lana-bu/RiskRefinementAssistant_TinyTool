@@ -9,44 +9,46 @@ function ready() {
   loadHTML('footer', 'footer.html'); // Load footer into #footer
 }
 
-function toggleDiv() {
-  value = document.getElementById('select').value;
-  div1 = document.getElementById('one');
-  div2 = document.getElementById('two');
-  div3 = document.getElementById('three');
-  div4 = document.getElementById('four');
-  div5 = document.getElementById('five');
+function toggleSubconditions() {
+  var subconditionNumber = document.getElementById('selectNumber');
+  var subconditions = document.getElementsByClassName('subconditions')[0]
+  var subconditionNames = subconditions.getElementsByClassName('subcondition-label')
+  if (parseInt(subconditionNumber.value) > subconditionNames.length) {
+    for (i = subconditionNames.length; i < parseInt(subconditionNumber.value); i++) {
+      var subcondition = document.createElement('div');
+      subcondition.classList.add('input-box');
+      subcondition.classList.add('subcondition');
+      var subconditionContents = `
+        <label class="label subcondition-label" for="subcondition">Subcondition ${parseInt(i) + 1}: </label>
+        <input class="input subcondition-input" type="text" name="subcondition">`;
+      subcondition.innerHTML = subconditionContents;
+      subconditions.append(subcondition);
+    }
+  } else if (parseInt(subconditionNumber.value) < subconditionNames.length) {
+    for (i = subconditionNames.length; i > parseInt(subconditionNumber.value); i--) {
+      var subconditions = document.getElementsByClassName('subconditions')[0];
+      subconditions.removeChild(subconditions.lastElementChild);
+    }
+  }
+}
 
-  if (parseInt(value) < 2) {
-    div1.style.visibility = 'hidden';
-    div2.style.visibility = 'hidden';
-    div3.style.visibility = 'hidden';
-    div4.style.visibility = 'hidden';
-    div5.style.visibility = 'hidden';
-  } else if (parseInt(value) == 2) {
-    div1.style.visibility = 'visible';
-    div2.style.visibility = 'visible';
-    div3.style.visibility = 'hidden';
-    div4.style.visibility = 'hidden';
-    div5.style.visibility = 'hidden';
-  } else if (parseInt(value) == 3) {
-    div1.style.visibility = 'visible';
-    div2.style.visibility = 'visible';
-    div3.style.visibility = 'visible';
-    div4.style.visibility = 'hidden';
-    div5.style.visibility = 'hidden';
-  } else if (parseInt(value) == 4) {
-    div1.style.visibility = 'visible';
-    div2.style.visibility = 'visible';
-    div3.style.visibility = 'visible';
-    div4.style.visibility = 'visible';
-    div5.style.visibility = 'hidden';
-  } else if (parseInt(value) == 5) {
-    div1.style.visibility = 'visible';
-    div2.style.visibility = 'visible';
-    div3.style.visibility = 'visible';
-    div4.style.visibility = 'visible';
-    div5.style.visibility = 'visible';
+function getOption() {
+    value = document.getElementsByClassName('drop-btn').value;
+    console.log(value);
+}
+
+function subconditionNumberClicked(event) {
+  var numberOption = event.target;
+  console.log(numberOption.value);
+  var subconditions = document.getElementsByClassName('subconditions')[0]
+  for (i = 0; i < numberOption.value; i++) {
+    var subcondition = document.createElement('div');
+    subcondition.classList.add('input-box subcondition');
+    var subconditionContents = `
+      <label class="label subcondition-label" for="subcondition">Subcondition ${i + 1}: </label>
+      <input class="input subcondition-input" type="text" name="subcondition">`;
+    subcondition.innerHTML = subconditionContents;
+    subconditions.append(subcondition)
   }
 }
 
