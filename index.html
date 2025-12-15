@@ -14,11 +14,11 @@
             <span class="static-text start">Given that</span>
             <div class="input-box condition">
                 <label class="label condition-label" for="condition">Condition: </label>
-                <input class="input condition-input" type="text" name="condition" value="">
+                <input id="condition-input" class="input condition-input" type="text" name="condition" value="">
             </div>
-            <div class="subconditions">
+            <div id="subconditions-container" class="subconditions">
                 <label class="subcondition-number-label" for="subcondition-dropdown">Number of subconditions: </label>
-                <select id="selectNumber" class="drop-btn" onchange="toggleSubconditions()">
+                <select id="select-number" class="drop-btn"> <!-- onchange="toggleSubconditions()" -->
                     <option class="drop-option" value="0" selected>None</option>
                     <option class="drop-option" value="2">2</option>
                     <option class="drop-option" value="3">3</option>
@@ -29,7 +29,7 @@
             <span class="static-text transition">then there is concern that (possibly)</span>
             <div class="input-box consequence">
                 <label class="label consequence-label" for="consequence">Consequence: </label>
-                <input class="input consequence-input" type="text" name="consequence" value="">
+                <input id="consequence-input" class="input consequence-input" type="text" name="consequence" value="">
             </div>
             <button class="btn submit-btn" type="button">Submit</button>
             <span><a href="output.html">temporary output page link</a></span>

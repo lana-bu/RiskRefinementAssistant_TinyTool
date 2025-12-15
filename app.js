@@ -1,5 +1,6 @@
 // AI suggestion to make app file for each page to run, interconnects functions of other js files
 
+import { RiskInputController } from './controllers.js';
 import { loadHTML } from './page_border.js';
 
 if (document.readyState == 'loading') {
@@ -11,6 +12,11 @@ if (document.readyState == 'loading') {
 function ready() {
     loadHTML('header', 'header.html'); // Load header into #header
     loadHTML('footer', 'footer.html'); // Load footer into #footer
+
+    if (document.getElementById('input-form')) {
+        const controller = new RiskInputController();
+        controller.init();
+    }
 }
 
 // ready function
