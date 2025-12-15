@@ -8,6 +8,7 @@ export class RiskInputView {
         this.subconditionsContainer = document.getElementById('subconditions-container');
         this.numOfSubcondDropdown = document.getElementById('select-number');
         this.consequenceInput = document.getElementById('consequence-input');
+        this.submitButton = document.getElementById('submit-btn');
     }
 
     renderSubconditions(numOfSubcond) {
@@ -25,7 +26,7 @@ export class RiskInputView {
                 <input class="input subcondition-input" type="text" name="subcondition" value="">`;
 
             subcondition.innerHTML = subconditionContents;
-            
+
             this.subconditionsContainer.append(subcondition);
             }
         } else if (numOfSubcond < subconditionNames.length) {
@@ -33,6 +34,29 @@ export class RiskInputView {
                 this.subconditionsContainer.removeChild(this.subconditionsContainer.lastElementChild);
             }
         }
+    }
+
+    getConditionValue() { // AI suggested function to get user input from condition input box
+        return this.conditionInput.value;
+    }
+
+    getSubconditionValues() {
+        var subconditionInputs = this.subconditionsContainer.getElementsByClassName('subcondition-input');
+        var subconditionValues = [];
+
+        for (var i = 0; i < subconditionInputs.length; i++) {
+            subconditionValues.append(subconditionInputs[i].value);
+        }
+
+        return subconditionValues;
+    }
+
+    getConsequence() { // AI suggested function to get user input from consequence input box
+        return this.consequenceInput.value;
+    }
+
+    showErrors() {
+        // display error messages on webpage
     }
 }
 

@@ -16,10 +16,15 @@ export class RiskInputController {
         }
 
         this.view.numOfSubcondDropdown.addEventListener('change', () => this.handleDropdown());
+        this.view.submitButton.addEventListener('click', () => this.handleSubmit());
     }
 
     handleDropdown() {
         this.view.renderSubconditions(parseInt(this.view.numOfSubcondDropdown.value));
+    }
+
+    handleSubmit() {
+
     }
 }
 
@@ -31,6 +36,8 @@ export class RiskOutputController {
     }
 
     init() {
-
+        if (!this.view.result) { // need to change result
+            return;
+        }
     }
 }
