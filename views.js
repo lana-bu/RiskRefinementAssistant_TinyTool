@@ -45,13 +45,13 @@ export class RiskInputView {
         var subconditionValues = [];
 
         for (var i = 0; i < subconditionInputs.length; i++) {
-            subconditionValues.append(subconditionInputs[i].value);
+            subconditionValues.push(subconditionInputs[i].value);
         }
 
         return subconditionValues;
     }
 
-    getConsequence() { // AI suggested function to get user input from consequence input box
+    getConsequenceValue() { // AI suggested function to get user input from consequence input box
         return this.consequenceInput.value;
     }
 
