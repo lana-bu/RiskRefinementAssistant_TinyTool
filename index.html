@@ -4,17 +4,17 @@
     <title>Risk Refinement Assistant</title>
     <meta name="description" content="Refine a project risk using the CTC format.">
     <link rel="stylesheet" href="styles.css"/>
-    <script src="script.js" async></script>
+    <script src="app.js" type="module" async></script>
 </head>
 <body>
     <div id="header"></div> <!-- header placeholder -->
     <section class="content-section container">
         <h2 class="section-header">Refine Your Risk</h2>
-        <form class="input-form">
+        <form class="input-form" id="input-form">
             <span class="static-text start">Given that</span>
             <div class="input-box condition">
                 <label class="label condition-label" for="condition">Condition: </label>
-                <input class="input condition-input" type="text" name="condition">
+                <input class="input condition-input" type="text" name="condition" value="">
             </div>
             <div class="subconditions">
                 <label class="subcondition-number-label" for="subcondition-dropdown">Number of subconditions: </label>
@@ -29,9 +29,9 @@
             <span class="static-text transition">then there is concern that (possibly)</span>
             <div class="input-box consequence">
                 <label class="label consequence-label" for="consequence">Consequence: </label>
-                <input class="input consequence-input" type="text" name="consequence">
+                <input class="input consequence-input" type="text" name="consequence" value="">
             </div>
-            <input type="submit" value="Submit">
+            <button class="btn submit-btn" type="button">Submit</button>
             <span><a href="output.html">temporary output page link</a></span>
         </form>
     </section>

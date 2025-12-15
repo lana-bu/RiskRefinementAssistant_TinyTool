@@ -4,14 +4,17 @@
     <title>Refined Risk | Risk Refinement Assistant</title>
     <meta name="description" content="View the refined risk sentence generated from your CTC inputs.">
     <link rel="stylesheet" href="styles.css"/>
-    <script src="script.js" async></script>
+    <script src="app.js" type="module" async></script>
 </head>
 <body>
     <div id="header"></div> <!-- header placeholder -->
     <section class="content-section container">
         <h2 class="section-header">Refined Risk</h2>
-        <p>risk sentence
+        <p id="refined-risk" class="risk-sentence">risk sentence
         </p>
+        <button id="copy-btn" class="btn copy-btn">Copy</button>
+        <button id="edit-btn" class="btn edit-btn">Edit</button>
+        <button id="new-btn" class="btn new-btn">New</button>
     </section>
     <div id="footer"></div> <!-- footer placeholder -->
 </body>

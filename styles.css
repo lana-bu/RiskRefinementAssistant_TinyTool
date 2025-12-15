@@ -153,7 +153,7 @@ body {
 
 /*buttons*/
 
-input[type="submit"] {
+.btn {
     display: block;
     margin: 30px auto;
     padding: 10px 25px;
@@ -165,7 +165,7 @@ input[type="submit"] {
     cursor: pointer;
 }
 
-input[type="submit"]:hover {
+.btn:hover {
     background-color: #174a85;
 }
 
