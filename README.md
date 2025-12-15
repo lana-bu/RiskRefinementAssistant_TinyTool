@@ -14,3 +14,4 @@ This web application is a risk refinement assistant. It will take the condition(
 - Getting value from input field: https://www.geeksforgeeks.org/javascript/how-to-get-the-value-of-text-input-field-using-javascript/
 - Handling form input with JavaScript: https://strapi.io/blog/vanilla-javascript-form-handling-guide
 - Running JavaScript file on HTML that imports functions/classes from other JavaScript files: https://stackoverflow.com/questions/58357941/cannot-use-import-statement-outside-a-module
+- Simple JavaScript MVC example: https://www.slingacademy.com/article/integrating-javascript-classes-into-mvc-architectures/
