@@ -16,3 +16,6 @@ This web application is a risk refinement assistant. It will take the condition(
 - Running JavaScript file on HTML that imports functions/classes from other JavaScript files: https://stackoverflow.com/questions/58357941/cannot-use-import-statement-outside-a-module
 - Simple JavaScript MVC example: https://www.slingacademy.com/article/integrating-javascript-classes-into-mvc-architectures/
 - Differences between getElementById, getElementsByClassName, and querySelector: https://www.xjavascript.com/blog/queryselector-and-queryselectorall-vs-getelementsbyclassname-and-getelementbyid-in-javascript/
+- JavaScript trim() function to remove whitespace from either side of string: https://www.w3schools.com/jsref/jsref_trim_string.asp
+- JavaScript methods to add elements to an array: https://www.geeksforgeeks.org/javascript/add-elements-to-a-javascript-array/
+- Emptying a JavaScript array: https://www.geeksforgeeks.org/javascript/how-to-empty-an-array-in-javascript/
