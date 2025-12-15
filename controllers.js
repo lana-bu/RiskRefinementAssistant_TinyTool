@@ -28,7 +28,7 @@ export class RiskInputController {
         this.model.setSubconditions(this.view.getSubconditionValues());
         this.model.setConsequence(this.view.getConsequenceValue());
 
-        console.log('Errors: ' + this.model.validateInput());
+        this.view.clearErrors();
 
         var inputErrors = this.model.validateInput();
 

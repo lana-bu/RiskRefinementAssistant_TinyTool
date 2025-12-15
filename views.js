@@ -99,7 +99,11 @@ export class RiskInputView {
     }
 
     clearErrors(){
+        const errors = document.querySelectorAll('.error');
 
+        errors.forEach(error => {
+            error.remove();
+        });
     }
 }
 
