@@ -59,12 +59,42 @@ export class RiskInputView {
         // display error messages on webpage
         if (errors[0] != '') {
             var conditionError = document.createElement('div');
+
             conditionError.classList.add('error');
             conditionError.classList.add('condition-error');
+
             var conditionErrorContents = `
             <span class="error-msg">${errors[0]}</span>`;
+
             conditionError.innerHTML = conditionErrorContents;
+
             this.conditionInput.parentElement.append(conditionError);
+        } else if (errors[1] != '') {
+            var subconditionsError = document.createElement('div');
+
+            subconditionsError.classList.add('error');
+            subconditionsError.classList.add('subconditions-error');
+
+            var subconditionsErrorContents = `
+            <span class="error-msg">${errors[1]}</span>`;
+
+            subconditionsError.innerHTML = subconditionsErrorContents;
+
+            this.subconditionsContainer.append(subconditionsError);
+        }
+
+        if (errors[2] != '') {
+            var consequenceError = document.createElement('div');
+
+            consequenceError.classList.add('error');
+            consequenceError.classList.add('subconditions-error');
+
+            var consequenceErrorContents = `
+            <span class="error-msg">${errors[2]}</span>`;
+
+            consequenceError.innerHTML = consequenceErrorContents;
+
+            this.consequenceInput.parentElement.append(consequenceError);
         }
     }
 
