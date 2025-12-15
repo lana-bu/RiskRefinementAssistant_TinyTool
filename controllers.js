@@ -10,14 +10,16 @@ export class RiskInputController {
         this.view = new RiskInputView();
     }
 
-    init() {
+    init() { // AI suggestion to have init function and define what it does
         if (!this.view.form) {
             return; // this controller not needed for any pages except index which has the input form
         }
 
-        this.view.numOfSubcondDropdown.addEventListener('change', () => {
-            this.view.renderSubconditions(parseInt(this.view.numOfSubcondDropdown.value));
-        })
+        this.view.numOfSubcondDropdown.addEventListener('change', () => this.handleDropdown());
+    }
+
+    handleDropdown() {
+        this.view.renderSubconditions(parseInt(this.view.numOfSubcondDropdown.value));
     }
 }
 
