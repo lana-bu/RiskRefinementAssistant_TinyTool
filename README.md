@@ -13,3 +13,4 @@ This web application is a risk refinement assistant. It will take the condition(
 - Passing an array to a JavaScript class constructor: https://stackoverflow.com/questions/50032748/using-an-array-inside-a-constructor-using-javascript
 - Getting value from input field: https://www.geeksforgeeks.org/javascript/how-to-get-the-value-of-text-input-field-using-javascript/
 - Handling form input with JavaScript: https://strapi.io/blog/vanilla-javascript-form-handling-guide
+- Running JavaScript file on HTML that imports functions/classes from other JavaScript files: https://stackoverflow.com/questions/58357941/cannot-use-import-statement-outside-a-module
