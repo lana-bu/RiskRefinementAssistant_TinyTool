@@ -55,8 +55,21 @@ export class RiskInputView {
         return this.consequenceInput.value;
     }
 
-    showErrors() {
+    showErrors(errors) {
         // display error messages on webpage
+        if (errors[0] != '') {
+            var conditionError = document.createElement('div');
+            conditionError.classList.add('error');
+            conditionError.classList.add('condition-error');
+            var conditionErrorContents = `
+            <span class="error-msg">${errors[0]}</span>`;
+            conditionError.innerHTML = conditionErrorContents;
+            this.conditionInput.parentElement.append(conditionError);
+        }
+    }
+
+    clearErrors(){
+
     }
 }
 

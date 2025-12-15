@@ -28,11 +28,20 @@ export class RiskInputController {
         this.model.setSubconditions(this.view.getSubconditionValues());
         this.model.setConsequence(this.view.getConsequenceValue());
 
-        console.log('Condition: ' + this.view.getConditionValue());
-        console.log('Subconditions: ' + this.view.getSubconditionValues());
-        console.log('Consequence: ' + this.view.getConsequenceValue());
-
         console.log('Errors: ' + this.model.validateInput());
+
+        var inputErrors = this.model.validateInput();
+
+        for (var i = 0; i < inputErrors.length; i++) {
+            if (inputErrors[i] != '') {
+                this.view.showErrors(inputErrors);
+                return;
+            }
+        }
+
+        // const sentence = this.model.buildRiskSentence();
+        // sessionStorage.setItem('riskSentence', sentence);
+        // window.location.href = 'output.html';
     }
 }
 
