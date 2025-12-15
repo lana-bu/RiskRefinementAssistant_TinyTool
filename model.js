@@ -17,16 +17,33 @@ export class RiskModel {
         }
 
         for (var i = 0; i < values.length; i++) {
-            this.subconditions.push(values[i]);
+            this.subconditions.push(values[i].trim());
         }
     }
 
     setConsequence(value) {
-        this.consequence = value;
+        this.consequence = value.trim();
     }
 
     validateInput() {
-        // validate input method
+        var errorMsg = ['','','']
+
+        if (this.condition.trim() == '' && this.subconditions.length < 1) {
+            errorMsg[0] = 'You must enter a condition';
+        } else if (this.subconditions.length > 0) {
+            for (var i = 0; i < this.subconditions.length; i++) {
+                if (this.subconditions[i].trim() == '') {
+                    errorMsg[1] = 'You must provide all subconditions'
+                    break;
+                }
+            }
+        }
+
+        if (this.consequence.trim() == '') {
+            errorMsg[2] = 'You must enter a consequence'
+        }
+
+        return errorMsg;
     }
 
     refineRisk() {

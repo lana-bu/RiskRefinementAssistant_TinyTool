@@ -24,13 +24,15 @@ export class RiskInputController {
     }
 
     handleSubmit() {
-        // this.model.setCondition(this.view.getConditionValue());
-        // this.model.setSubconditions(this.view.getSubconditionValues());
-        // this.model.setConsequence(this.view.getConsequence());
+        this.model.setCondition(this.view.getConditionValue());
+        this.model.setSubconditions(this.view.getSubconditionValues());
+        this.model.setConsequence(this.view.getConsequenceValue());
 
         console.log('Condition: ' + this.view.getConditionValue());
         console.log('Subconditions: ' + this.view.getSubconditionValues());
         console.log('Consequence: ' + this.view.getConsequenceValue());
+
+        console.log('Errors: ' + this.model.validateInput());
     }
 }
 
