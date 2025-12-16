@@ -23,6 +23,7 @@ body {
 
 .content-section {
     margin-top: 40px;
+    font-size: 18px;
 }
 
 /*header/nav*/
@@ -85,7 +86,7 @@ body {
 }
 
 .dropdown-row:last-child{
-    border-bottom: none
+    border-bottom: none;
 }
 
 .help-dropdown-row {
@@ -121,8 +122,12 @@ body {
 }
 
 .help-topic-header {
-    font-size: 20px;
+    font-size: 22px;
     margin-top: 30px;
+}
+
+.indented-paragraph {
+    text-indent: 50px
 }
 
 /*form styles*/
@@ -295,7 +300,7 @@ footer {
 
 .copied-msg {
     margin-top: 8px;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1;
 } 
 
