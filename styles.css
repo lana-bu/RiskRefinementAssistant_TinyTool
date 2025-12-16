@@ -179,7 +179,7 @@ body {
 /*temporary message*/
 
 .temporary-msg {
-    visibility: hidden;
+    opacity: 0;
 }
 
 /*links*/

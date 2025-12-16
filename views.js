@@ -149,10 +149,21 @@ export class RiskOutputView {
     }
 
     show(element) {
-        element.style.visibility = 'visible';
+        element.style.opacity = 1;
     }
 
     hide(element) {
-        element.style.visibility = 'hidden'
+        const fadeInterval = setInterval(() => this.fade(element, fadeInterval), 50);
+    }
+
+    fade(element, intervalID) {
+        var opacity = Number(window.getComputedStyle(element).getPropertyValue('opacity'));
+
+        if (opacity > 0) {
+            opacity = opacity - 0.05;
+            element.style.opacity = opacity;
+        } else {
+            clearInterval(intervalID);
+        }
     }
 }
