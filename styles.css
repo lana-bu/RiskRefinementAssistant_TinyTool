@@ -134,6 +134,11 @@ body {
     font-weight: bold;
 }
 
+.ctc-example {
+    text-align: center;
+    color: #ead4ab;
+}
+
 /*form styles*/
 
 .input-form {
