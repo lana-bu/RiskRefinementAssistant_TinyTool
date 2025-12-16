@@ -28,7 +28,7 @@ This web application is a risk refinement assistant. It will take the condition(
 - Dropdown navigation menu: https://www.w3schools.com/howto/howto_js_dropdown.asp
 - CSS text-indent property: https://www.w3schools.com/cssref/pr_text_text-indent.php
 ### Icon Images
-- Copy icon: https://fonts.google.com/icons?selected=Material+Symbols+Outlined:content_copy:FILL@0;wght@400;GRAD@0;opsz@24&icon.size=24&icon.color=%23e3e3e3
-- Edit icon: https://fonts.google.com/icons?selected=Material+Symbols+Outlined:edit:FILL@0;wght@400;GRAD@0;opsz@24&icon.size=24&icon.color=%23e3e3e3
-- New icon: https://fonts.google.com/icons?selected=Material+Symbols+Outlined:add:FILL@0;wght@400;GRAD@0;opsz@24&icon.size=24&icon.color=%23e3e3e3
+- Copy icon: https://fonts.google.com/icons?selected=Material+Symbols+Outlined:content_copy:FILL@0;wght@400;GRAD@0;opsz@20&icon.size=18&icon.color=%2323395B
+- Edit icon: https://fonts.google.com/icons?selected=Material+Symbols+Outlined:edit:FILL@0;wght@400;GRAD@0;opsz@20&icon.size=18&icon.color=%2323395B
+- New icon: https://fonts.google.com/icons?selected=Material+Symbols+Outlined:add:FILL@0;wght@400;GRAD@0;opsz@20&icon.size=18&icon.color=%2323395B
 - Menu icon: https://fonts.google.com/icons?selected=Material+Symbols+Outlined:menu:FILL@0;wght@400;GRAD@0;opsz@48&icon.size=64&icon.color=%23EFF1F3
