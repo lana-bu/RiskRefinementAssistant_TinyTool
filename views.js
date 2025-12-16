@@ -105,9 +105,37 @@ export class RiskInputView {
             error.remove();
         });
     }
+
+    fillForm(model) { // AI suggestion for how to fill form with previous inputs
+        this.conditionInput.value = model.getCondition();
+
+        this.numOfSubcondDropdown.value = model.getSubconditions().length;
+        this.renderSubconditions(model.getSubconditions().length);
+
+        var subconditionInputs = this.subconditionsContainer.getElementsByClassName('subcondition-input');
+        for (var i = 0; i < subconditionInputs.length; i++) {
+            subconditionInputs[i].value = model.getSubconditions()[i];
+        }
+
+        this.consequenceInput.value = model.getConsequence();
+    }
 }
 
 // AI suggestion to have separate view class for input and output pages
 export class RiskOutputView {
+    constructor() { // AI suggestion for what attributes the RiskOutputView should have
+        this.sentenceOutput = document.getElementById('refined-risk');
+        this.copyButton = document.getElementById('copy-btn');
+        this.editButton = document.getElementById('edit-btn');
+        this.newButton = document.getElementById('new-btn');
+    }
 
+    renderOutput(sentence) {
+        this.sentenceOutput.textContent = sentence;
+        console.log(sentence);
+    }
+    
+    copySentenceToClipboard() {
+        // add functionality later
+    }
 }

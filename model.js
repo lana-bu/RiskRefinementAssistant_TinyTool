@@ -11,6 +11,10 @@ export class RiskModel {
         this.condition = value.trim(); // trim takes away extra whitespace on either side of string
     }
 
+    getCondition() {
+        return this.condition;
+    }
+
     setSubconditions(values) {
         if (this.subconditions.length > 0) {
             this.subconditions = []
@@ -21,8 +25,16 @@ export class RiskModel {
         }
     }
 
+    getSubconditions() {
+        return this.subconditions;
+    }
+
     setConsequence(value) {
         this.consequence = value.trim();
+    }
+
+    getConsequence() {
+        return this.consequence;
     }
 
     validateInput() {
@@ -49,8 +61,10 @@ export class RiskModel {
     refineRisk() {
         var sentence = 'Given that'; // placeholder
         this.refinedRisk = sentence;
-        return this.refinedRisk;
+    }
 
+    getRefinedRisk() {
+        return this.refinedRisk;
     }
 
     toJSON() { // AI suggestion to condense data for transforming it into a JSON formatted string later

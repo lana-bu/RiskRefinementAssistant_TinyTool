@@ -23,7 +23,7 @@ export class RiskInputController {
         this.view.renderSubconditions(parseInt(this.view.numOfSubcondDropdown.value));
     }
 
-    handleSubmit() {
+    handleSubmit() { // AI suggested function, but modified by us in how it validates inputs, clears errors, and shows new errors
         this.model.setCondition(this.view.getConditionValue());
         this.model.setSubconditions(this.view.getSubconditionValues());
         this.model.setConsequence(this.view.getConsequenceValue());
@@ -39,9 +39,11 @@ export class RiskInputController {
             }
         }
 
-        // const sentence = this.model.buildRiskSentence();
-        // sessionStorage.setItem('riskSentence', sentence);
-        // window.location.href = 'output.html';
+        this.model.refineRisk();
+        
+        this.model.save();
+
+        window.location.href = 'output.html';
     }
 }
 
@@ -53,8 +55,6 @@ export class RiskOutputController {
     }
 
     init() {
-        if (!this.view.result) { // need to change result
-            return;
-        }
+        this.view.renderOutput(this.model.getRefinedRisk());
     }
 }
