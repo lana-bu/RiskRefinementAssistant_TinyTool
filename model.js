@@ -102,6 +102,7 @@ refineRisk()
 
     //append the consequence and store the result
     riskSentence += this.consequence;
+    riskSentence += "."
     this.refinedRisk = riskSentence;
 }
 
