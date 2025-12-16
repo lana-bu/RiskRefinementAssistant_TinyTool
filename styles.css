@@ -52,7 +52,7 @@ body {
     font-weight: bold;
 }
 
-.main-nav ul {
+/* .main-nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -61,9 +61,13 @@ body {
 
 
 .main-nav li {
-    /*display: inline-block;*/
+    /*display: inline-block;
     margin: 0 15px;
-}
+} */
+
+/* .help-dropdown-row {
+    display: inline-block;
+} */
 
 .main-nav a {
     text-decoration: none;
@@ -73,6 +77,10 @@ body {
 
 .main-nav a:hover {
     text-decoration: underline;
+}
+
+.help-dropdown-row {
+    display: inline-block;
 }
 
 /*section headers & text*/
@@ -194,10 +202,6 @@ body {
 }
 
 /* icon images */
-
-.menu-icon {
-    position: right;
-}
 
 /*temporary message*/
 
