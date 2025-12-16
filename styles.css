@@ -257,6 +257,19 @@ body {
     text-decoration: underline;
 }
 
+.tiny-tool-link {
+    margin-top: 10px;
+}
+
+.tiny-tool-link a {
+    color: #eec579;
+    text-decoration: none;
+}
+
+.tiny-tool-link a:hover {
+    text-decoration: underline;
+}
+
 /*footer*/
 
 footer {
