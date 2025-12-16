@@ -35,9 +35,20 @@ function initHeaderEvents() {
     if (menuDropdown) {
         menuDropdown.addEventListener('click', toggleDropdown);
     }
+    const dropdownLinks = document.getElementsByTagName('a');
+    if (dropdownLinks.length > 0) {
+        for (var i = 0; i < dropdownLinks.length; i++) {
+            var link = dropdownLinks[i];
+            link.addEventListener('click', clearSessionStorage); // necessary to get a fresh session when navigation off output page through nav and back onto home page
+        }
+    }
 }
 
 function toggleDropdown(event) {
     console.log('clicked');
     document.getElementById('menu-content').classList.toggle("show");
+}
+
+function clearSessionStorage(event) {
+    sessionStorage.clear();
 }
