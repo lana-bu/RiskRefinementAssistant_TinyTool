@@ -130,12 +130,11 @@ export class RiskOutputView {
         this.newButton = document.getElementById('new-btn');
     }
 
-    renderOutput(sentence) {
+    renderOutput(sentence) { // AI suggestion for how to put sentence text into proper HTML element
         this.sentenceOutput.textContent = sentence;
-        console.log(sentence);
     }
     
-    copySentenceToClipboard() {
-        // add functionality later
+    copySentenceToClipboard() { // AI suggestion for how to copy sentence output text to clipboard
+        navigator.clipboard.writeText(this.sentenceOutput.textContent);
     }
 }

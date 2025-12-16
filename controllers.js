@@ -6,7 +6,7 @@ import { RiskOutputView } from './views.js';
 
 export class RiskInputController {
     constructor() { // AI suggestion to assign new RiskModel and RiskInputView to controller's model and view attributes
-        this.model = new RiskModel();
+        this.model = RiskModel.fromStorage();
         this.view = new RiskInputView();
     }
 
@@ -40,7 +40,7 @@ export class RiskInputController {
         }
 
         this.model.refineRisk();
-        
+
         this.model.save();
 
         window.location.href = 'output.html';
@@ -54,7 +54,24 @@ export class RiskOutputController {
         this.view = new RiskOutputView();
     }
 
-    init() {
+    init() { // AI suggestion for what actions to include in initialization function
         this.view.renderOutput(this.model.getRefinedRisk());
+        
+        this.view.copyButton.addEventListener('click', () => this.handleCopy());
+        this.view.editButton.addEventListener('click', () => this.handleEdit());
+        this.view.newButton.addEventListener('click', () => this.handleNew());
+    }
+
+    handleCopy() {
+        this.view.copySentenceToClipboard();
+    }
+
+    handleEdit() {
+        window.location.href = 'index.html';
+    }
+
+    handleNew() {
+        this.model.clear();
+        window.location.href = 'index.html';
     }
 }
