@@ -2,6 +2,7 @@
 
 import { RiskInputController, RiskOutputController } from './controllers.js';
 import { loadHTML } from './page_border.js';
+//import { toggleDropdown } from './page_border.js'
 
 if (document.readyState == 'loading') {
     document.addEventListener('DOMContentLoaded', ready)
@@ -23,4 +24,8 @@ function ready() {
         const controller = new RiskOutputController();
         controller.init();
     }
+}
+
+function toggleDropdown() {
+  document.getElementById("nav-dropdown").classList.toggle("show");
 }
