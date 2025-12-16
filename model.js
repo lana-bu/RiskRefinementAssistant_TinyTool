@@ -59,7 +59,7 @@ export class RiskModel {
     }
 
     refineRisk() {
-        var sentence = 'Given that'; // placeholder
+        var sentence = 'Given that' + this.condition + this.consequence; // placeholder
         this.refinedRisk = sentence;
     }
 

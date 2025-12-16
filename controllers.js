@@ -11,8 +11,8 @@ export class RiskInputController {
     }
 
     init() { // AI suggestion to have init function and define what it does
-        if (!this.view.form) {
-            return; // this controller not needed for any pages except index which has the input form
+        if (this.model.getConsequence() != '') { // if edit button was clicked (so there is pre-saved data)
+            this.view.fillForm(this.model);
         }
 
         this.view.numOfSubcondDropdown.addEventListener('change', () => this.handleDropdown());
