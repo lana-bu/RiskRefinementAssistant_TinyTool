@@ -21,7 +21,7 @@ This web application is a risk refinement assistant. It will take the condition(
 - Emptying a JavaScript array: https://www.geeksforgeeks.org/javascript/how-to-empty-an-array-in-javascript/
 - JavaScript to remove all elements with a certain class: https://bobbyhadz.com/blog/javascript-remove-all-elements-with-class
 - Differences between innerHTML, innerText, and textContent: https://www.freecodecamp.org/news/innerhtml-vs-innertext-vs-textcontent/
-### Icons
+### Icon Images
 - Copy icon: https://fonts.google.com/icons?selected=Material+Symbols+Outlined:content_copy:FILL@0;wght@400;GRAD@0;opsz@24&icon.size=24&icon.color=%23e3e3e3
 - Edit icon: https://fonts.google.com/icons?selected=Material+Symbols+Outlined:edit:FILL@0;wght@400;GRAD@0;opsz@24&icon.size=24&icon.color=%23e3e3e3
 - New icon: https://fonts.google.com/icons?selected=Material+Symbols+Outlined:add:FILL@0;wght@400;GRAD@0;opsz@24&icon.size=24&icon.color=%23e3e3e3
