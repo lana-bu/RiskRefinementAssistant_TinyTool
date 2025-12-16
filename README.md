@@ -20,3 +20,4 @@ This web application is a risk refinement assistant. It will take the condition(
 - JavaScript methods to add elements to an array: https://www.geeksforgeeks.org/javascript/add-elements-to-a-javascript-array/
 - Emptying a JavaScript array: https://www.geeksforgeeks.org/javascript/how-to-empty-an-array-in-javascript/
 - JavaScript to remove all elements with a certain class: https://bobbyhadz.com/blog/javascript-remove-all-elements-with-class
+- Differences between innerHTML, innerText, and textContent: https://www.freecodecamp.org/news/innerhtml-vs-innertext-vs-textcontent/
