@@ -142,7 +142,7 @@ body {
 
 .label {
     display: inline-block;
-    width: 130px;
+    width: 140px;
     font-weight: bold;
 }
 
@@ -154,7 +154,6 @@ body {
 }
 
 .static-text {
-    font-weight: bold;
     display: block;
     margin-bottom: 10px;
 }
