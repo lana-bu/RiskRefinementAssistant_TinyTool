@@ -3,7 +3,7 @@
 This web application is a risk refinement assistant. It will take the condition(s) and consequence of a user's risk and formulate it into a refined risk sentence. We are creating this web app for our final project in the CIS 375 (Software Engineering I) at the University of Michigan-Dearborn.
 ## Sources
 ### Code Help
-- Reusing HTML header and footer with JavaScript: https://www.w3tutorials.net/blog/make-header-and-footer-files-to-be-included-in-multiple-html-pages/
+- Reusing HTML header and footer (and giving them events) with JavaScript: https://www.w3tutorials.net/blog/make-header-and-footer-files-to-be-included-in-multiple-html-pages/
 - HTML input types: https://www.w3schools.com/html/html_form_input_types.asp
 - Dropdown selection menu: https://www.tutorialpedia.org/blog/dropdown-menu-changing-with-selection-html-css/
 - HTML form info: https://www.w3schools.com/html/html_forms.asp
