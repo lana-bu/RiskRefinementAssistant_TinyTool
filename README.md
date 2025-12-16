@@ -23,6 +23,7 @@ This web application is a risk refinement assistant. It will take the condition(
 - Differences between innerHTML, innerText, and textContent: https://www.freecodecamp.org/news/innerhtml-vs-innertext-vs-textcontent/
 - Adding an image to a button that also has text: https://forum.freecodecamp.org/t/how-to-add-icon-to-button-next-to-button-text/687465/6
 - Adding blank alt text to button icon image so that it is ignored by screen readers (for accessibility): https://forum.freecodecamp.org/t/how-to-add-icon-to-button-next-to-button-text/687465/4
+- How to set a time delay with JavaScript: https://www.geeksforgeeks.org/javascript/how-to-set-time-delay-in-javascript/
 ### Icon Images
 - Copy icon: https://fonts.google.com/icons?selected=Material+Symbols+Outlined:content_copy:FILL@0;wght@400;GRAD@0;opsz@24&icon.size=24&icon.color=%23e3e3e3
 - Edit icon: https://fonts.google.com/icons?selected=Material+Symbols+Outlined:edit:FILL@0;wght@400;GRAD@0;opsz@24&icon.size=24&icon.color=%23e3e3e3
