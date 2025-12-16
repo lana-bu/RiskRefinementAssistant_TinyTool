@@ -176,6 +176,12 @@ body {
     background-color: #BF8A28;
 }
 
+/*temporary message*/
+
+.temporary-msg {
+    visibility: hidden;
+}
+
 /*links*/
 .page-link {
     text-align: center;

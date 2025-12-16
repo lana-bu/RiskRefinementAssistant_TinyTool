@@ -128,6 +128,7 @@ export class RiskOutputView {
         this.copyButton = document.getElementById('copy-btn');
         this.editButton = document.getElementById('edit-btn');
         this.newButton = document.getElementById('new-btn');
+        this.copiedMessage = document.getElementById('copied-msg');
     }
 
     renderOutput(sentence) { // AI suggestion for how to put sentence text into proper HTML element
@@ -136,5 +137,22 @@ export class RiskOutputView {
     
     copySentenceToClipboard() { // AI suggestion for how to copy sentence output text to clipboard
         navigator.clipboard.writeText(this.sentenceOutput.textContent);
+    }
+
+    displayTemporaryCopiedMessage() {
+        // this.copiedMessage.style.visibility = 'visible';
+        // setTimeout(() => {
+        //     this.copiedMessage.style.visibility = 'hidden';
+        //  }, 1000);
+        this.show(this.copiedMessage);
+        setTimeout(() => this.hide(this.copiedMessage), 1000);
+    }
+
+    show(element) {
+        element.style.visibility = 'visible';
+    }
+
+    hide(element) {
+        element.style.visibility = 'hidden'
     }
 }

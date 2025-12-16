@@ -64,6 +64,7 @@ export class RiskOutputController {
 
     handleCopy() {
         this.view.copySentenceToClipboard();
+        this.view.displayTemporaryCopiedMessage();
     }
 
     handleEdit() {
