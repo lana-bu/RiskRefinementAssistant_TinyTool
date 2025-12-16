@@ -1,10 +1,10 @@
 // AI sugesstion to put model in its own file
 export class RiskModel {
-    constructor() { // AI suggestion to predefine attributes with empty values
-        this.condition = '';
-        this.subconditions = [];
-        this.consequence = '';
-        this.sentence = ''; // may not be necessary
+    constructor(data = {}) { // AI suggestion to predefine attributes with empty values
+        this.condition = data.condition || '';
+        this.subconditions = data.subconditions || [];
+        this.consequence = data.consequence || '';
+        this.refinedRisk = data.refinedRisk || ''; // may not be necessary
     }
 
     setCondition(value) { // AI suggestion for how to assign value to condition
@@ -47,22 +47,35 @@ export class RiskModel {
     }
 
     refineRisk() {
-        // build risk sentence
+        var sentence = 'Given that'; // placeholder
+        this.refinedRisk = sentence;
+        return this.refinedRisk;
+
     }
 
-    toJSON() {
-        // turn inputs into JSON?
+    toJSON() { // AI suggestion to condense data for transforming it into a JSON formatted string later
+        return {
+            condition: this.condition,
+            subconditions: this.subconditions,
+            consequence: this.consequence,
+            refinedRisk: this.refinedRisk
+        };
     }
 
-    static fromStorage() {
-        // get saved risk inputs from session storage
+    static fromStorage() { // AI suggestion for how to put risk data from old instance into new instance
+        const rawData = sessionStorage.getItem('riskData');
+        if (rawData != null) {
+            return new RiskModel(JSON.parse(rawData)); // convert data from JSON formatted string to JavaScript object that can be used to construct a new RiskModel instance
+        } else {
+            return new RiskModel();
+        }
     }
 
-    save() {
-        // save session storage?
+    save() { // AI suggestion for how to save risk data for current instance as a JSON formatted string in session storage
+        sessionStorage.setItem('riskData', JSON.stringify(this.toJSON()));
     }
 
-    clear() {
-        // clear session storage
+    clear() { // AI suggestion for how to delete stored risk data from session storage
+        sessionStorage.removeItem('riskData');
     }
 }
