@@ -130,6 +130,10 @@ body {
     text-indent: 50px
 }
 
+.credits-desc {
+    font-weight: bold;
+}
+
 /*form styles*/
 
 .input-form {
