@@ -58,10 +58,53 @@ export class RiskModel {
         return errorMsg;
     }
 
-    refineRisk() {
-        var sentence = 'Given that' + this.condition + this.consequence; // placeholder
-        this.refinedRisk = sentence;
+refineRisk() 
+{
+    let riskSentence = "Given that ";
+    const subcondCount = this.subconditions.length;
+
+    //case 1, no subconditions
+    if (subcondCount < 1)
+    {
+        riskSentence += this.condition;
+        riskSentence += ", then there is concern that (possibly) ";
     }
+
+    //case 2, one or more subconditions
+    else 
+    {
+        if (subcondCount <= 2)
+        {
+            //exactly 1 or 2 subcons
+            riskSentence += this.subconditions[0];
+
+            if (subcondCount === 2) 
+            {
+                riskSentence += " and " + this.subconditions[1];
+            }
+
+            riskSentence += ", then there is concern that (possibly) ";
+        }
+        else
+        {
+            //three or more subcons
+            riskSentence += this.subconditions[0];
+
+            for (let i = 1; i < subcondCount - 1; i++) 
+            {
+                riskSentence += ", " + this.subconditions[i];
+            }
+
+            riskSentence += ", and " + this.subconditions[subcondCount - 1];
+            riskSentence += ", then there is concern that (possibly) ";
+        }
+    }
+
+    //append the consequence and store the result
+    riskSentence += this.consequence;
+    this.refinedRisk = riskSentence;
+}
+
 
     getRefinedRisk() {
         return this.refinedRisk;
