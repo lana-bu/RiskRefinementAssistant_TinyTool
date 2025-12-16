@@ -33,7 +33,7 @@ body {
     padding: 15px 0;
 }
 
-.header-always-visible {
+.title-and-menu {
     display: flex;
     align-items: center;
 }

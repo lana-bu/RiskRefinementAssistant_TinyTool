@@ -31,25 +31,13 @@ export async function loadHTML(elementId, filePath) {
 }
 
 function initHeaderEvents() {
-    const menuDropdown = document.getElementById('nav-dropdown');
+    const menuDropdown = document.getElementById('menu-btn');
     if (menuDropdown) {
         menuDropdown.addEventListener('click', toggleDropdown);
-        console.log('added listener');
     }
 }
 
 function toggleDropdown(event) {
     console.log('clicked');
-    document.getElementById('myDropdown').classList.toggle("show");
+    document.getElementById('menu-content').classList.toggle("show");
 }
-
-window.onclick = function(e) {
-    if (!e.target.matches('.dropdown-btn')) {
-    var dropdown = document.getElementById("nav-dropdown");
-        if (dropdown.classList.contains('show')) {
-        dropdown.classList.remove('show');
-        }
-    }
-}
-
-// event listener for dropdown navigation
