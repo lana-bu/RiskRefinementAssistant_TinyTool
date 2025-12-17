@@ -20,7 +20,7 @@ export class RiskInputController {
     }
 
     handleDropdown() {
-        this.view.renderSubconditions(parseInt(this.view.numOfSubcondDropdown.value));
+        this.view.renderSubconditions(this.view.getNumOfSubconditions());
     }
 
     handleSubmit() { // AI suggested function, but modified by us in how it validates inputs, clears errors, and shows new errors

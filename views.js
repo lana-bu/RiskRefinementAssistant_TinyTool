@@ -40,6 +40,10 @@ export class RiskInputView {
         return this.conditionInput.value;
     }
 
+    getNumOfSubconditions() {
+        return parseInt(this.numOfSubcondDropdown.value)
+    }
+
     getSubconditionValues() {
         var subconditionInputs = this.subconditionsContainer.getElementsByClassName('subcondition-input');
         var subconditionValues = [];
@@ -140,10 +144,6 @@ export class RiskOutputView {
     }
 
     displayTemporaryCopiedMessage() {
-        // this.copiedMessage.style.visibility = 'visible';
-        // setTimeout(() => {
-        //     this.copiedMessage.style.visibility = 'hidden';
-        //  }, 1000);
         this.show(this.copiedMessage);
         setTimeout(() => this.hide(this.copiedMessage), 1000);
     }
