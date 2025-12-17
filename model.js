@@ -40,7 +40,7 @@ export class RiskModel {
     validateInput() {
         var errorMsg = ['','','']
 
-        if (this.condition.trim() == '' && this.subconditions.length < 1) {
+        if (this.condition == '' && this.subconditions.length < 1) {
             errorMsg[0] = 'You must enter a condition.';
         } else if (this.subconditions.length > 0) {
             for (var i = 0; i < this.subconditions.length; i++) {
@@ -51,7 +51,7 @@ export class RiskModel {
             }
         }
 
-        if (this.consequence.trim() == '') {
+        if (this.consequence == '') {
             errorMsg[2] = 'You must enter a consequence.'
         }
 
