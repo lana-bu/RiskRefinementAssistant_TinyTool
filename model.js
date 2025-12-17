@@ -58,54 +58,52 @@ export class RiskModel {
         return errorMsg;
     }
 
-refineRisk() 
-{
-    let riskSentence = "Given that ";
-    const subcondCount = this.subconditions.length;
+    refineRisk() {
+        let riskSentence = "Given that ";
+        const subcondCount = this.subconditions.length;
 
-    //case 1, no subconditions
-    if (subcondCount < 1)
-    {
-        riskSentence += this.condition;
-        riskSentence += ", then there is concern that (possibly) ";
-    }
-
-    //case 2, one or more subconditions
-    else 
-    {
-        if (subcondCount <= 2)
+        //case 1, no subconditions
+        if (subcondCount < 1)
         {
-            //exactly 1 or 2 subcons
-            riskSentence += this.subconditions[0];
-
-            if (subcondCount === 2) 
-            {
-                riskSentence += " and " + this.subconditions[1];
-            }
-
+            riskSentence += this.condition;
             riskSentence += ", then there is concern that (possibly) ";
         }
-        else
+
+        //case 2, one or more subconditions
+        else 
         {
-            //three or more subcons
-            riskSentence += this.subconditions[0];
-
-            for (let i = 1; i < subcondCount - 1; i++) 
+            if (subcondCount <= 2)
             {
-                riskSentence += ", " + this.subconditions[i];
+                //exactly 1 or 2 subcons
+                riskSentence += this.subconditions[0];
+
+                if (subcondCount === 2) 
+                {
+                    riskSentence += " and " + this.subconditions[1];
+                }
+
+                riskSentence += ", then there is concern that (possibly) ";
             }
+            else
+            {
+                //three or more subcons
+                riskSentence += this.subconditions[0];
 
-            riskSentence += ", and " + this.subconditions[subcondCount - 1];
-            riskSentence += ", then there is concern that (possibly) ";
+                for (let i = 1; i < subcondCount - 1; i++) 
+                {
+                    riskSentence += ", " + this.subconditions[i];
+                }
+
+                riskSentence += ", and " + this.subconditions[subcondCount - 1];
+                riskSentence += ", then there is concern that (possibly) ";
+            }
         }
+
+        //append the consequence and store the result
+        riskSentence += this.consequence;
+        riskSentence += "."
+        this.refinedRisk = riskSentence;
     }
-
-    //append the consequence and store the result
-    riskSentence += this.consequence;
-    riskSentence += "."
-    this.refinedRisk = riskSentence;
-}
-
 
     getRefinedRisk() {
         return this.refinedRisk;
