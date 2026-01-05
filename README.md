@@ -1,6 +1,6 @@
 # RiskRefinementAssistant_TinyTool
 ## Description
-This web application is a risk refinement assistant. It will take the condition(s) and consequence of a user's risk and formulate it into a refined risk sentence. We are creating this web app for our final project in the CIS 375 (Software Engineering I) at the University of Michigan-Dearborn.
+This web application is a risk refinement assistant. It takes the condition(s) and consequence of a user's risk and formulates it into a refined risk sentence. We created this web app for our final project in the CIS 375 (Software Engineering I) at the University of Michigan-Dearborn.
 ## Sources
 ### Code Help
 - Reusing HTML header and footer (and giving them events) with JavaScript: https://www.w3tutorials.net/blog/make-header-and-footer-files-to-be-included-in-multiple-html-pages/
